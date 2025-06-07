@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Icons/popcorn.png" type="image/png">
+    <title>Poppin' - TV</title>
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/tvshow.css">
+    <script src="JS/poppin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard hidden">
+        <aside class="sidebar">
+            <div class="logo"><img src="Icons/popcorn.png" id="LogoIcon">Poppin'</div>
+            <nav>
+                <ul>
+                <li><a href="landing.html"><img src="./Icons/home.png" id="homeIcon"> Home</a></li>
+                <li><a href="categories.html"><img src="Icons/Genre.png" id="genreIcon"> Categories</a></li>
+                <li><a href="trending.html"><img src="Icons/trending.png" id="trendIcon"> Trending</a></li>
+                </ul>
+            </nav>
+
+            <div class="section">
+                <p class="section-title">My Library</p>
+                <ul>
+                <li><a href="favorites.html"><img src="Icons/favorite.png" id="favIcon"> Favorites</a></li>
+                <li><a href="watchlist.html"><img src="Icons/later.png" id="laterIcon"> Watchlist</a></li>
+                <li><a href="history.html"><img src="Icons/watch.png" id="watchIcon"> History</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <p class="section-title">Settings</p>
+                <ul>
+                <li><a href="account.html">⚙️ Account</a></li>
+                <li><a href="#">🚪 Log Out</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="tabs">
+                    <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+                    <a href="homepage.html"><span>All</span></a>
+                    <a href="tvshows.html"><span class="active">TV Shows</span></a>
+                    <a href="movies.html"><span>Movies</span></a>
+                    <a href="newrelease.html"><span>New Release</span></a>
+                </div>
+                <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+                    <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                        aria-label="Search movies" required />
+                        <button type="submit">Search</button>
+                </form>
+            </header>
+
+            <script>
+                const toggleBtn = document.getElementById('toggleMenu');
+                const dashboard = document.querySelector('.dashboard');
+
+                toggleBtn.addEventListener('click', () => {
+                    dashboard.classList.toggle('hidden');
+                });
+            </script>
+
+            <div class="hero-container">
+                <div class="hero hero1">
+                    <div class="hero-info">
+                        <div>
+                            <img src="images/frieren/frieren-title.png" alt="Frieren: Beyond Journey's End">
+                            <p class="hero-genre">2023 | Adventure | 28 Episodes</p>
+                            <p class="hero-sypnosis">"Frieren: Beyond Journey's End" follows Frieren, an elf mage who is near-immortal, after she and her human companions, including the hero Himmel, defeat the Demon King. While the humans age and eventually die, Frieren continues to live, exploring and learning more magic. The story explores Frieren's reflections on her time with her former party, the meaning of life, and her own personal journey. </p>
+                            <button onclick="location.href='tvshow/frieren.html'">
+                                ▶ Watch Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-poster">
+                        <img src="images/frieren/frieren-poster.jpg" alt="poster">
+                    </div>
+                </div>
+
+                <div class="hero hero2">
+                    <div class="hero-info">
+                        <div>
+                            <img src="images/brooklyn99/brooklyn99-logo.png" alt="Brooklyn Nine-Nine">
+                            <p class="hero-genre">2013 | Sitcom | 8 seasons</p>
+                            <p class="hero-sypnosis">Brooklyn Nine-Nine is a comedy series about a talented but immature NYPD detective, Jake Peralta, and his diverse team at Brooklyn's 99th precinct. Their lives change when a strict new captain, Raymond Holt, takes charge. The show blends humor, crime-solving, and heartfelt moments as the team navigates cases, friendships, and personal growth.</p>
+                            <button onclick="location.href='tvshow/brooklyn99.html'">
+                                ▶ Watch Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-poster">
+                        <img src="images/brooklyn99/brooklyn99-poster.jpg" alt="poster">
+                    </div>
+                </div>
+
+                <div class="hero hero3">
+                    <div class="hero-info">
+                        <div>
+                            <img src="images/startup/startup-title.png" alt="Start-Up">
+                            <p class="hero-genre">2020 | Romance | 16 Episodes</p>
+                            <p class="hero-sypnosis">The story follows young entrepreneurs chasing their dreams in South Korea's fictional Silicon Valley, Sandbox. The story centers on Seo Dal-mi, an ambitious woman striving to become Korea’s Steve Jobs, and Nam Do-san, a shy tech genius. As they build their start-up, they navigate love, rivalry, and personal growth while overcoming the challenges of the business world.</p>
+                            <button onclick="location.href='tvshow/startup.html'">
+                                ▶ Watch Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-poster">
+                        <img src="images/startup/starup-poster.jpg" alt="poster">
+                    </div>
+                </div>
+            </div>
+
+            <section class="carousel topm">
+                <h2>Popular This Week</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="tvshow/frieren.html"><img src="images/frieren/frieren-poster.jpg" /></a>
+                    <a href="tvshow/brooklyn99.html"><img src="images/brooklyn99/brooklyn99-poster.jpg" /></a>
+                    <a href="tvshow/startup.html"><img src="images/startup/starup-poster.jpg" /></a>
+                    <a href="tvshow/vinlandsaga.html"><img src="images/vinlandsaga/vinlandsaga-poster.jpg" /></a>
+                    <a href="tvshow/probinsyano.html"><img src="images/probinsyano/probinsyano-poster.jpg" /></a>
+                    <a href="tvshow/mandalorian.html"><img src="images/mandalorian/mandalorian-poster.jpg" /></a>
+                    <a href="tvshow/queengambit.html"><img src="images/queensgambit/queensgambit-poster.jpg" /></a>
+                    <a href="tvshow/grandblue.html"><img src="images/grandblue/grandblue-poster.jpg" /></a>
+                    <a href="tvshow/theoffice.html"><img src="images/theoffice/theoffice-poster.jpg" /></a>
+                    <a href="tvshow/breakingbad.html"><img src="images/breakingbad/breakingbad-poster.jpg" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+            <section class="carousel topm">
+                <h2>Asian TV Shows</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="tvshow/crashlandingonyou.html"><img src="images/crashlandingonyou/crashlandingonyou-poster.jpg" /></a>
+                    <a href="tvshow/mushokutensei.html"><img src="images/mushokutensei/mushokutensei-poster.jpg" /></a>
+                    <a href="tvshow/probinsyano.html"><img src="images/probinsyano/probinsyano-poster.jpg" /></a>
+                    <a href="tvshow/saikik.html"><img src="images/saikik/saikik-poster.jpg" /></a>
+                    <a href="tvshow/itaewonclass.html"><img src="images/itaewonclass/Itaewonclass-poster.jpg" /></a>
+                    <a href="tvshow/encantadia.html"><img src="images/encantandia/encantadia-poster.jpg" /></a>
+                    <a href="tvshow/startup.html"><img src="images/startup/starup-poster.jpg" /></a>
+                    <a href="tvshow/grandblue.html"><img src="images/grandblue/grandblue-poster.jpg" /></a>
+                    <a href="tvshow/killerparadox.html"><img src="images/killerparadox/killerparadox-poster.jpg" /></a>
+                    <a href="tvshow/onthewingsoflove.html"><img src="images/onthewingsolove/onthewingsoflove-poster.jpg" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+            <section class="carousel topm">
+                <h2>US TV Shows</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="tvshow/breakingbad.html"><img src="images/breakingbad/breakingbad-poster.jpg" /></a>
+                    <a href="tvshow/brooklyn99.html"><img src="images/brooklyn99/brooklyn99-poster.jpg" /></a>
+                    <a href="tvshow/gameofthrones.html"><img src="images/gameofthrones/gameofthrones-poster.jpg" /></a>
+                    <a href="tvshow/mandalorian.html"><img src="images/mandalorian/mandalorian-poster.jpg" /></a>
+                    <a href="tvshow/moneyheist.html"><img src="images/moneyheist/moneyheist-poster.jpg" /></a>
+                    <a href="tvshow/queensgambit.html"><img src="images/queensgambit/queensgambit-poster.jpg" /></a>
+                    <a href="tvshow/theoffice.html"><img src="images/theoffice/theoffice-poster.jpg" /></a>
+                    <a href="tvshow/wednesday.html"><img src="images/wednesday/wednesday-poster.jpg" /></a>
+                    <a href="tvshow/brooklyn99.html"><img src="images/brooklyn99/brooklyn99-poster.jpg" /></a>
+                    <a href="tvshow/breakingbad.html"><img src="images/breakingbad/breakingbad-poster.jpg" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+            <section class="carousel topm">
+                <h2>Romantic TV Shows</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="tvshow/tsukigakirei.html"><img src="images/tsukigakirei/tsukigakirei-poster.jpg" /></a>
+                    <a href="tvshow/2521.html"><img src="images/2521/2521-poster.jpg" /></a>
+                    <a href="tvshow/crashlandingonyou.html"><img src="images/crashlandingonyou/crashlandingonyou-poster.jpg" /></a>
+                    <a href="tvshow/goblin.html"><img src="images/goblin/goblin-poster.jpg" /></a>
+                    <a href="tvshow/itaewonclass.html"><img src="images/itaewonclass/Itaewonclass-poster.jpg" /></a>
+                    <a href="tvshow/mariaclara.html"><img src="images/mariaclara/mariaclara-poster.jpg" /></a>
+                    <a href="tvshow/onthewingsoflove.html"><img src="images/onthewingsolove/onthewingsoflove-poster.jpg" /></a>
+                    <a href="tvshow/startup.html"><img src="images/startup/starup-poster.jpg" /></a>
+                    <a href="tvshow/tsukigakirei.html"><img src="images/tsukigakirei/tsukigakirei-poster.jpg" /></a>
+                    <a href="tvshow/grandblue.html"><img src="images/grandblue/grandblue-poster.jpg" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="poppin-footer">
+    <!-- Top Footer: Logo + Links -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+        <span class="footer-brand">Poppin'</span>
+      </div>
+
+      <!-- Overview & Support Links -->
+      <div class="footer-right">
+        <div class="footer-columns">
+
+          <!-- Overview Columns -->
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support Column -->
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

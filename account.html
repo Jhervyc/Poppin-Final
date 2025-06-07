@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="./Icons/popcorn.png" type="image/png">
+  <title>Poppin' - Account</title>
+  <link rel="stylesheet" href="CSS/base.css" />
+  <link rel="stylesheet" href="CSS/account.css">
+  <script defer src="poppin.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard hidden">
+    <aside class="sidebar">
+        <div class="logo"><img src="Icons/popcorn.png" id="LogoIcon">Poppin'</div>
+        <nav>
+            <ul>
+            <li><a href="landing.html"><img src="./Icons/home.png" id="homeIcon"> Home</a></li>
+            <li><a href="categories.html"><img src="Icons/Genre.png" id="genreIcon"> Categories</a></li>
+            <li><a href="trending.html"><img src="Icons/trending.png" id="trendIcon"> Trending</a></li>
+            </ul>
+        </nav>
+
+        <div class="section">
+            <p class="section-title">My Library</p>
+            <ul>
+            <li><a href="favorites.html"><img src="Icons/favorite.png" id="favIcon"> Favorites</a></li>
+            <li><a href="watchlist.html"><img src="Icons/later.png" id="laterIcon"> Watchlist</a></li>
+            <li><a href="history.html"><img src="Icons/watch.png" id="watchIcon"> History</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <p class="section-title">Settings</p>
+            <ul>
+            <li><a href="account.html">⚙️ Account</a></li>
+            <li><a href="#">🚪 Log Out</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+          <div class="tabs">
+              <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+              <a href="homepage.html"><span>All</span></a>
+              <a href="tvshows.html"><span>TV Shows</span></a>
+              <a href="movies.html"><span>Movies</span></a>
+              <a href="newrelease.html"><span>New Release</span></a>
+          </div>
+          <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+              <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                  aria-label="Search movies" required />
+                  <button type="submit">Search</button>
+          </form>
+      </header>
+
+      <script>
+          const toggleBtn = document.getElementById('toggleMenu');
+          const dashboard = document.querySelector('.dashboard');
+
+          toggleBtn.addEventListener('click', () => {
+              dashboard.classList.toggle('hidden');
+          });
+      </script>
+
+      <div class="main-container">
+          <div class="side">
+          <div class="side-top">
+            <div class="avatar"><img src="./images/avatar.png" alt="avatar"></div>
+          
+            <div class="profile-info">
+              <ul> Wesley
+                <li> Manage profile</li>
+                <li> Add profile email</li>
+                <li> Language</li>
+                <li> Playback Settings</li>
+              </ul>
+            </div>
+          </div>
+          <ul> Membership & Billing
+            <li>Change account email </li>
+            <li> Change password</li>
+            <li> Change phone number</li>
+            <li> Update payment info</li>
+            <li> Billing details</li>
+            <li> Redeeem gift card/promo code</li>
+            <li> Cancel membership</li>
+          </ul>
+          <ul> Settings
+            <li>Parental controls </li>
+            <li> Test Participant</li>
+            <li> Manage download devices</li>
+            <li> Sign out of all devices</li>
+          </ul>
+        </div>
+
+        <div class="right-section">
+          <div class="graph-container">
+            <div class="chart-header">
+              <h2>Weekly watch time breakdown</h2>
+              <p>22 hours 37 minutes<br><span>+12.78% up over the last 7 days</span></p>
+            </div>
+          
+
+            <div class="bar-chart">
+              <!-- Grid lines with labels -->
+              <div class="grid-line grid-line-5"><span class="grid-line-label">5hr</span></div>
+              <div class="grid-line grid-line-4"><span class="grid-line-label">4hr</span></div>
+              <div class="grid-line grid-line-3"><span class="grid-line-label">3hr</span></div>
+              <div class="grid-line grid-line-2"><span class="grid-line-label">2hr</span></div>
+              <div class="grid-line grid-line-1"><span class="grid-line-label">1hr</span></div>
+
+              <!-- Bars -->
+              <div class="bar-group"><div class="bar" style="height: 160px;"></div></div>
+              <div class="bar-group"><div class="bar" style="height: 120px;"></div></div>
+              <div class="bar-group"><div class="bar" style="height: 140px;"></div></div>
+              <div class="bar-group"><div class="bar" style="height: 100px;"></div></div>
+              <div class="bar-group"><div class="bar" style="height: 90px;"></div></div>
+              <div class="bar-group"><div class="bar" style="height: 150px;"></div></div>
+              <div class="bar-group"><div class="bar" style="height: 180px;"></div></div>
+            </div>
+            <!-- Date labels below the bar chart line -->
+            <div class="labels-container">
+              <div class="label">Jan 25</div>
+              <div class="label">Jan 27</div>
+              <div class="label">Jan 28</div>
+              <div class="label">Jan 29</div>
+              <div class="label">Jan 30</div>
+              <div class="label">Jan 31</div>
+              <div class="label">Feb 01</div>
+            </div>
+          </div>
+          
+          <!-- Devices used section -->
+          <div class="devices-used-container">
+            <p class="devices-title">Devices used</p>
+
+            <div class="device-card">
+              <span class="device-icon">
+                <img src="./images/mobilephone.png" class="mobile" alt="mobile">
+              </span>
+              <span class="device-name">Mobile</span>
+              <span class="device-percent">15%</span>
+            </div>
+
+            <div class="device-card">
+              <span class="device-icon">
+                <img src="./images/tablet.png" alt="Tablet">
+              </span>
+              <span class="device-name">Tablet</span>
+              <span class="device-percent">05%</span>
+            </div>
+
+            <div class="device-card">
+              <span class="device-icon">
+                <img src="./images/pc.png" alt="Computer">
+              </span>
+              <span class="device-name">Computer</span>
+              <span class="device-percent">30%</span>
+            </div>
+
+            <div class="device-card">
+              <span class="device-icon">
+                <img src="./images/tv.png" alt="TV">
+              </span>
+              <span class="device-name">TV</span>
+              <span class="device-percent">50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="poppin-footer">
+    <!-- Top Footer: Logo + Links -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+        <span class="footer-brand">Poppin'</span>
+      </div>
+
+      <!-- Overview & Support Links -->
+      <div class="footer-right">
+        <div class="footer-columns">
+
+          <!-- Overview Columns -->
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support Column -->
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

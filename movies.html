@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="./Icons/popcorn.png" type="image/png">
+  <title>Poppin' - Movies</title>
+  <link rel="stylesheet" href="CSS/base.css" />
+  <link rel="stylesheet" href="CSS/movies.css">
+  <script src="JS/poppin.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard hidden">
+    <aside class="sidebar">
+      <div class="logo"><img src="Icons/popcorn.png" id="LogoIcon">Poppin'</div>
+        <nav>
+            <ul>
+            <li><a href="landing.html"><img src="./Icons/home.png" id="homeIcon"> Home</a></li>
+            <li><a href="categories.html"><img src="Icons/Genre.png" id="genreIcon"> Categories</a></li>
+            <li><a href="trending.html"><img src="Icons/trending.png" id="trendIcon"> Trending</a></li>
+            </ul>
+        </nav>
+
+        <div class="section">
+            <p class="section-title">My Library</p>
+            <ul>
+            <li><a href="favorites.html"><img src="Icons/favorite.png" id="favIcon"> Favorites</a></li>
+            <li><a href="watchlist.html"><img src="Icons/later.png" id="laterIcon"> Watchlist</a></li>
+            <li><a href="history.html"><img src="Icons/watch.png" id="watchIcon"> History</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <p class="section-title">Settings</p>
+            <ul>
+            <li><a href="account.html">⚙️ Account</a></li>
+            <li><a href="#">🚪 Log Out</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+          <div class="tabs">
+              <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+              <a href="homepage.html"><span>All</span></a>
+              <a href="tvshows.html"><span>TV Shows</span></a>
+              <a href="movies.html" class="active"><span>Movies</span></a>
+              <a href="newrelease.html"><span>New Release</span></a>
+          </div>
+          <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+              <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                  aria-label="Search movies" required />
+                  <button type="submit">Search</button>
+          </form>
+      </header>
+
+      <script>
+          const toggleBtn = document.getElementById('toggleMenu');
+          const dashboard = document.querySelector('.dashboard');
+
+          toggleBtn.addEventListener('click', () => {
+              dashboard.classList.toggle('hidden');
+          });
+      </script>
+
+     
+    
+    <div class="hero-container">
+          <div class="hero hero1">
+              <div class="hero-info">
+                  <div>
+                      <img src="./images/homealone/homealone-title.png" alt="Home Alone">
+                      <p class="hero-genre">1990 | Comedy | 28 Movie</p>
+                      <p class="hero-sypnosis">"A family comedy without the family. Eight-year-old Kevin McCallister makes the most of the situation after his family unwittingly leaves him behind when they go on Christmas vacation. When thieves try to break into his home, he puts up a fight like no other.  </p>
+                      <button onclick="location.href='/HTMLFINALS_Araneta/imghtml/homealone.html'">
+                          ▶ Watch Now
+                      </button>
+                  </div>
+              </div>
+              <div class="hero-poster">
+                  <img src="./images/homealone/homealone-poster.jpg" alt="poster">
+              </div>
+          </div>
+
+          <div class="hero hero2">
+              <div class="hero-info">
+                  <div>
+                      <img src="./images/carrie/carrie-title.png" alt="Carrie">
+                      <p class="hero-genre">1976 | Horror | Movie</p>
+                      <p class="hero-sypnosis">If you’ve got a taste for terror… take Carrie to the prom.
+Withdrawn and sensitive teen Carrie White faces taunting from classmates at school and abuse from her fanatically pious mother. When strange occurrences start happening around Carrie, she begins to suspect that she has supernatural powers.</p>
+                      <button onclick="location.href='tvshow-brooklyn99.html'">
+                          ▶ Watch Now
+                      </button>
+                  </div>
+              </div>
+              <div class="hero-poster">
+                  <img src="./images/carrie/carrie-poster.jpg" alt="poster">
+              </div>
+          </div>
+
+          <div class="hero hero3">
+              <div class="hero-info">
+                  <div>
+                      <img src="./images/lalaland/lalaland-title.png" alt="LALALAND">
+                      <p class="hero-genre">2016 | Romance | Movie</p>
+                      <p class="hero-sypnosis">Here’s to the fools who dream.
+Mia, an aspiring actress, serves lattes to movie stars in between auditions and Sebastian, a jazz musician, scrapes by playing cocktail party gigs in dingy bars, but as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.</p>
+                      <button onclick="location.href='tvshow-startup.html'">
+                          ▶ Watch Now
+                      </button>
+                  </div>
+              </div>
+              <div class="hero-poster">
+                  <img src="./images/lalaland/lalaland-poster.jpg" alt="poster">
+              </div>
+          </div>
+      </div>
+
+    <section class="carousel topm">
+        <h2>Comedies</h2>
+        <div class="carousel-container">
+          <button class="scroll-btn left">&#10094;</button> 
+          <div class="scroll-row">
+            <a href="./movies/13.html"><img src="./images/13goingon30/13goingon30-poster.jpg" /></a>
+            <a href="./movies/dumb.html"><img src="./images/dumbanddumber/dumbanddumber-poster.jpg" /></a>
+            <a href="./movies/homealone.html"><img src="./images/homealone/homealone-poster.jpg" /></a>
+            <a href="./movies/50.html"><img src="./images/50firstdates/50.jpg" /></a>
+            <a href="./movies/dead.html"><img src="./images/deadpoolwolvarine/deadpoolwolvarine-poster.jpg" /></a>
+            <a href="#"><img src="./images/easya/easya-poster.jpg" /></a>
+            <a href="#"><img src="./images/shrek/shrek-poster.jpg" /></a>
+            <a href="#"><img src="./images/zoolander/zoolander-poster.jpg" /></a>
+            <a href="#"><img src="./images/superbad/superbad-poster.jpg" /></a>
+            <a href="#"><img src="./images/niceguys/niceguys-poster.jpg" /></a>
+          </div>
+          <button class="scroll-btn right">&#10095;</button>
+        </div>
+      </section>
+
+
+    <section class="carousel movies">
+        <h2>Horror/Thrillers</h2>
+        <div class="carousel-container">
+          <button class="scroll-btn left">&#10094;</button> 
+          <div class="scroll-row">
+            <a href="./movies/nosferatu.html"><img src="./images/nosferatu/nosferatu-poster.jpg" /></a>
+            <a href="./movies/carrie.html src="./images/carrie/carrie-poster.jpg" /></a>
+            <a href="./movies/shining.html"><img src="./images/shining/shining-poster.jpg" /></a>
+            <a href="./movies/us.html"><img src="./images/us/us-poster.jpg" /></a>
+            <a href="./movies/sinners.html"><img src="./images/sinners/sinners-poster.jpg" /></a>
+            <a href="#"><img src="./images/exorcist/exorcist-poster.jpg" /></a>
+            <a href="#"><img src="./images/it/it-poster.jpg" /></a>
+            <a href="#"><img src="./images/split/split-poster.jpg" /></a>
+            <a href="#"><img src="./images/americanpsycho/americanpsycho-poster.jpg" /></a>
+            <a href="#"><img src="./images/conjuring/conjuring-poster.jpg" /></a>
+          </div>
+          <button class="scroll-btn right">&#10095;</button>
+        </div>
+      </section>
+
+      <section class="carousel movies">
+        <h2>Romance</h2>
+        <div class="carousel-container">
+          <button class="scroll-btn left">&#10094;</button> 
+          <div class="scroll-row">
+            <a href="./movies/lala.html"><img src="./images/lalaland/lalaland-poster.jpg" /></a>
+            <a href="./movies/sunshine.html"><img src="./images/sunshine/sunshine-poster.jpg" /></a>
+            <a href="./movies/time.html"><img src="./images/abouttime/abouttime-poster.jpg" /></a>
+            <a href="./movies/10.html"><img src="./images/10things/10things-poster.jpg" /></a>
+            <a href="./movies/broke.html"><img src="./images/brokebackmountain/brokebackmountain-poster.jpg" /></a>
+            <a href="challengers.html"><img src="./images/challengers/challengers-poster.jpg" /></a>
+            <a href="pride.html"><img src="./images/pride/pride-poster.jpg" /></a>
+            <a href="love.html"><img src="./images/loveactually/loveactually-poster.jpg" /></a>
+            <a href="note.html"><img src="./images/notebook/notebook-poster.jpg" /></a>
+            <a href="your.html"><img src="./images/yourname/yourname-poster.jpg" /></a>  
+          </div>
+          <button class="scroll-btn right">&#10095;</button>
+        </div>
+      </section>
+
+      <footer class="poppin-footer">
+    <!-- Top Footer: Logo + Links -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+        <span class="footer-brand">Poppin'</span>
+      </div>
+
+      <!-- Overview & Support Links -->
+      <div class="footer-right">
+        <div class="footer-columns">
+
+          <!-- Overview Columns -->
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support Column -->
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>      

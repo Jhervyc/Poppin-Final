@@ -1,0 +1,87 @@
+.favorites-section {
+  padding: 30px 3%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.favorites-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.favorites-header h1 {
+  color: #e0e0e0;
+    font-size: 3em;
+    margin-bottom: 25px;
+    text-align: left; 
+}
+
+.inline-icon {
+  width: 40px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.film-count {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+
+.watchlist-item {
+  background-color: transparent; /* removed unnecessary box background */
+  border-radius: 8px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 0;
+  border: none;
+}
+
+.watchlist-item img {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.watchlist-item img:hover {
+  transform: scale(1.05);
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+

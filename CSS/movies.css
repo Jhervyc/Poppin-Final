@@ -1,0 +1,276 @@
+.carousel {
+  margin-top: 5%;
+}
+
+.carousel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.scroll-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  gap: 10px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  height: 200px;
+}
+
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}
+.scroll-row {
+  scrollbar-width: none;
+}
+
+.scroll-row img {
+  height: 200px;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-row img:hover {
+  transform: scale(1.05);
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+/* ======= RESPONSIVE STYLES ======= */
+@media (max-width: 1200px) {
+  
+  .hero-sypnosis{
+    display: none;
+  }
+  .hero-info{
+    font-size: .5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  .featured {
+    flex-direction: column;
+  }
+
+  .side-poster img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin-top: 15px;
+    border-radius: 15px;
+  }
+
+  .carousel h2 {
+    font-size: 1.3rem;
+  }
+
+  .scroll-row {
+    height: 140px;
+  }
+
+  .scroll-row img {
+    height: 140px;
+  }
+
+  .scroll-btn {
+    font-size: 20px;
+    padding: 8px;
+  }
+  .hero-sypnosis{
+    display: none;
+  }
+  .hero-info{
+    font-size: .5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-row {
+    height: 120px;
+  }
+
+  .scroll-row img {
+    height: 120px;
+  }
+
+  .sidebar {
+    padding: 5px;
+  }
+
+  .logo {
+    font-size: 1em;
+  }
+  .hero-sypnosis{
+    display: none;
+  }
+  .hero-info{
+    font-size: .5rem;
+  }
+}
+
+
+/* ANDREY ADD ONS */
+
+.topm {
+  margin-top: 100px;
+}
+.movies {
+  margin-top: 10px;
+}
+
+/* JHERVS TV */
+
+.hero-container{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.hero {
+  display: flex;
+  margin: 3rem auto;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-width: 1600px;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  animation: fadeCycle 30s infinite;
+}
+
+@keyframes fadeCycle {
+  0%   { opacity: 0; pointer-events: none;}
+  10%  { opacity: 1; pointer-events: auto; }
+  30%  { opacity: 1; pointer-events: auto;}
+  40%  { opacity: 0; pointer-events: none;}
+  100% { opacity: 0; pointer-events: none;}
+}
+
+.hero1{
+  background-image: 
+    linear-gradient(to right,#121212 20%, transparent 70%),
+    linear-gradient(to top, #121212, transparent 10%),
+    linear-gradient(to bottom, #121212, transparent 10%),
+    linear-gradient(to left, #121212, transparent 10%),
+    url('../images/homealone/homealone-bg.jpg');
+    animation-delay: 0s;
+    z-index: 3;
+    background-size: cover;
+}
+
+.hero2 {
+  background-image: 
+    linear-gradient(to right,#121212 20%, transparent 70%),
+    linear-gradient(to top, #121212, transparent 10%),
+    linear-gradient(to bottom, #121212, transparent 10%),
+    linear-gradient(to left, #121212, transparent 10%),
+    url('../images/carrie/carrie-bg.jpg');
+    animation-delay: 10s;
+    z-index: 2;
+    background-size: cover;
+}
+
+.hero3 {
+  background-image: 
+    linear-gradient(to right,#121212 20%, transparent 70%),
+    linear-gradient(to top, #121212, transparent 10%),
+    linear-gradient(to bottom, #121212, transparent 10%),
+    linear-gradient(to left, #121212, transparent 10%),
+    url('../images/lalaland/lalaland-bg.jpg');
+    z-index: 1;
+    animation-delay: 20s;
+    background-size: cover;
+}
+
+.hero-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero-info img {
+  width: 100%;
+}
+
+.hero-info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.hero-genre {
+  font-weight: bold;
+}
+
+.hero-sypnosis {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.hero-info button{
+  color: black;
+  background-color: #FFCC00;
+  font-size: 15px;
+  font-weight: bolder;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.hero-poster{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero-poster img {
+  width: 50%;
+  height: auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.moviestop {
+  margin-left: 10%;
+  font-size:larger;
+  color:#FFCC00;
+}

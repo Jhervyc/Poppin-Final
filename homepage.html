@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./Icons/popcorn.png" type="image/png" />
+  <title>Poppin'</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+   <link rel="stylesheet" href="./CSS/base.css">
+  <link rel="stylesheet" href="./CSS/homepage.css" />
+</head>
+
+<body>
+  <div class="dashboard hidden">
+    <aside class="sidebar">
+      <div class="logo"><img src="Icons/popcorn.png" id="LogoIcon">Poppin'</div>
+      <nav>
+          <ul>
+          <li><a href="landing.html"><img src="./Icons/home.png" id="homeIcon"> Home</a></li>
+          <li><a href="categories.html"><img src="Icons/Genre.png" id="genreIcon"> Categories</a></li>
+          <li><a href="trending.html"><img src="Icons/trending.png" id="trendIcon"> Trending</a></li>
+          </ul>
+      </nav>
+
+      <div class="section">
+          <p class="section-title">My Library</p>
+          <ul>
+          <li><a href="favorites.html"><img src="Icons/favorite.png" id="favIcon"> Favorites</a></li>
+          <li><a href="watchlist.html"><img src="Icons/later.png" id="laterIcon"> Watchlist</a></li>
+          <li><a href="history.html"><img src="Icons/watch.png" id="watchIcon"> History</a></li>
+          </ul>
+      </div>
+
+      <div class="section">
+          <p class="section-title">Settings</p>
+          <ul>
+          <li><a href="account.html">⚙️ Account</a></li>
+          <li><a href="#">🚪 Log Out</a></li>
+          </ul>
+      </div>
+  </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+                <div class="tabs">
+                    <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+                    <a href="homepage.html" class="active"><span>All</span></a>
+                    <a href="tvshows.html"><span>TV Shows</span></a>
+                    <a href="movies.html"><span>Movies</span></a>
+                    <a href="newrelease.html"><span>New Release</span></a>
+                </div>
+                <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+                    <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                        aria-label="Search movies" required />
+                        <button type="submit">Search</button>
+                </form>
+            </header>
+
+            <script>
+                const toggleBtn = document.getElementById('toggleMenu');
+                const dashboard = document.querySelector('.dashboard');
+
+                toggleBtn.addEventListener('click', () => {
+                    dashboard.classList.toggle('hidden');
+                });
+            </script>
+
+      <section class="hero-slideshow" aria-label="Featured Shows">
+        <div class="hero-slide active">
+          <img src="./images/strangerthings/strangerthings-bg.jpg" alt="Stranger Things Banner" />
+          <div class="hero-caption">
+            <h1>Stranger Things</h1>
+            <p>When a boy disappears, a small town uncovers government secrets and supernatural horrors.</p>
+            <a href="#" class="play-btn">▶ Play Now</a>
+          </div>
+        </div>
+
+        <div class="hero-slide">
+          <img src="./images/brooklyn99/brooklyn99-bg2.jpg" alt="Brooklyn Nine-Nine Banner" />
+          <div class="hero-caption">
+            <h1>Brooklyn Nine-Nine</h1>
+            <p>An immature but talented NYPD detective solves crimes with his quirky team.</p>
+            <a href="#" class="play-btn">▶ Play Now</a>
+          </div>
+        </div>
+
+        <div class="hero-slide">
+          <img src="./images/startup/startup-bg.jpg" alt="startup" />
+          <div class="hero-caption">
+            <h1>Start-Up</h1>
+            <p>They built an empire from nothing — but the past has come to collect.</p>
+            <a href="#" class="play-btn">▶ Play Now</a>
+          </div>
+        </div>
+
+        <div class="hero-slide">
+          <img src="./images/babysitter/babysitter-bg.jpg" alt="The Babysitter" />
+          <div class="hero-caption">
+            <h1>The Babysitter</h1>
+            <p>A teenage crush turns into a bloody night of survival when secrets come out.</p>
+            <a href="#" class="play-btn">▶ Play Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel">
+        <h2>Popular on Poppin'</h2>
+        <br>
+        <div class="carousel-container">
+          <button class="scroll-btn left">&#8249;</button>
+          <div class="scroll-row">
+            <a href="./movies/dead.html"><img src="./images/deadpoolwolvarine/deadpoolwolvarine-poster.jpg" /></a>
+            <a href="./movies/homealone.html"><img src="./images/homealone/homealone-poster.jpg" /></a>
+            <a href="./movies/shining.html"><img src="./images/shining/shining-poster.jpg" /></a>
+            <a href="./movies/lala.html"><img src="./images/lalaland/lalaland-poster.jpg" /></a>
+            <a href="your.html"><img src="./images/yourname/yourname-poster.jpg" /></a>
+            <a href="tvshow/breakingbad.html"><img src="images/breakingbad/breakingbad-poster.jpg" /></a>
+            <a href="tvshow/moneyheist.html"><img src="images/moneyheist/moneyheist-poster.jpg" /></a>
+            <a href="tvshow/mandalorian.html"><img src="images/mandalorian/mandalorian-poster.jpg" /></a>
+            <a href="tvshow/gameofthrones.html"><img src="images/gameofthrones/gameofthrones-poster.jpg" /></a>
+            <a href="tvshow/brooklyn99.html"><img src="images/brooklyn99/brooklyn99-poster.jpg" /></a>
+            <a href="./movies/10.html"><img src="./images/10things/10things-poster.jpg" /></a>
+            <a href="./movies/note.html"><img src="./images/notebook/notebook-poster.jpg" /></a>
+            <a href="./movies/love.html"><img src="./images/loveactually/loveactually-poster.jpg" /></a>
+            <a href="./movies/broke.html"><img src="./images/brokebackmountain/brokebackmountain-poster.jpg" /></a>
+            <a href="tvshow/queensgambit.html"><img src="images/queensgambit/queensgambit-poster.jpg" /></a>
+            <a href="tvshow/wednesday.html"><img src="images/wednesday/wednesday-poster.jpg" /></a>
+            <a href="tvshow/theoffice.html"><img src="images/theoffice/theoffice-poster.jpg" /></a>
+            <a href="tvshow/crashlandingonyou.html"><img src="images/crashlandingonyou/crashlandingonyou-poster.jpg" /></a>
+            <a href="tvshow/startup.html"><img src="images/startup/starup-poster.jpg" /></a>
+            <a href="tvshow/goblin.html"><img src="images/goblin/goblin-poster.jpg" /></a>
+
+          </div>
+          <button class="scroll-btn right">&#8250;</button>
+        </div>
+      </section>
+      <section class="carousel">
+        <h2>Recommended on Poppin'</h2>
+        <br>
+        <div class="carousel-container">
+          <button class="scroll-btn left">&#8249;</button>
+          <div class="scroll-row">
+            <a href="./movies/50.html"><img src="./images/50firstdates/50.jpg" /></a>
+            <a href="#"><img src="./images/easya/easya-poster.jpg" /></a>
+            <a href="tvshow/encantadia.html"><img src="images/encantandia/encantadia-poster.jpg" /></a>
+            <a href="tvshow/killerparadox.html"><img src="images/killerparadox/killerparadox-poster.jpg" /></a>
+            <a href="./movies/13.html"><img src="./images/13goingon30/13goingon30-poster.jpg" /></a>
+            <a href="tvshow/mariaclara.html"><img src="images/mariaclara/mariaclara-poster.jpg" /></a>
+            <a href="./movies/nosferatu.html"><img src="./images/nosferatu/nosferatu-poster.jpg" /></a>
+            <a href="tvshow/onthewingsoflove.html"><img src="images/onthewingsolove/onthewingsoflove-poster.jpg" /></a>
+            <a href="tvshow/saikik.html"><img src="images/saikik/saikik-poster.jpg" /></a>
+            <a href="tvshow/tsukigakirei.html"><img src="images/tsukigakirei/tsukigakirei-poster.jpg" /></a>
+            <a href="./movies/10.html"><img src="./images/10things/10things-poster.jpg" /></a>
+            <a href="./movies/note.html"><img src="./images/notebook/notebook-poster.jpg" /></a>
+            <a href="./movies/love.html"><img src="./images/loveactually/loveactually-poster.jpg" /></a>
+            <a href="./movies/broke.html"><img src="./images/brokebackmountain/brokebackmountain-poster.jpg" /></a>
+            <a href="tvshow/queensgambit.html"><img src="images/queensgambit/queensgambit-poster.jpg" /></a>
+            <a href="tvshow/wednesday.html"><img src="images/wednesday/wednesday-poster.jpg" /></a>
+            <a href="tvshow/theoffice.html"><img src="images/theoffice/theoffice-poster.jpg" /></a>
+            <a href="tvshow/crashlandingonyou.html"><img src="images/crashlandingonyou/crashlandingonyou-poster.jpg" /></a>
+            <a href="tvshow/startup.html"><img src="images/startup/starup-poster.jpg" /></a>
+            <a href="tvshow/goblin.html"><img src="images/goblin/goblin-poster.jpg" /></a>
+
+          </div>
+          <button class="scroll-btn right">&#8250;</button>
+        </div>
+      </section>
+
+      <section class="carousel">
+        <h2>Top Picks on Poppin'</h2>
+        <br>
+        <div class="carousel-container">
+          <button class="scroll-btn left">&#8249;</button>
+          <div class="scroll-row">
+            <a href="./movies/10.html"><img src="./images/10things/10things-poster.jpg" /></a>
+            <a href="./movies/note.html"><img src="./images/notebook/notebook-poster.jpg" /></a>
+            <a href="./movies/love.html"><img src="./images/loveactually/loveactually-poster.jpg" /></a>
+            <a href="./movies/broke.html"><img src="./images/brokebackmountain/brokebackmountain-poster.jpg" /></a>
+            <a href="tvshow/queensgambit.html"><img src="images/queensgambit/queensgambit-poster.jpg" /></a>
+            <a href="tvshow/wednesday.html"><img src="images/wednesday/wednesday-poster.jpg" /></a>
+            <a href="tvshow/theoffice.html"><img src="images/theoffice/theoffice-poster.jpg" /></a>
+            <a href="tvshow/crashlandingonyou.html"><img src="images/crashlandingonyou/crashlandingonyou-poster.jpg" /></a>
+            <a href="tvshow/startup.html"><img src="images/startup/starup-poster.jpg" /></a>
+            <a href="tvshow/goblin.html"><img src="images/goblin/goblin-poster.jpg" /></a>
+            <a href="./movies/10.html"><img src="./images/10things/10things-poster.jpg" /></a>
+            <a href="./movies/note.html"><img src="./images/notebook/notebook-poster.jpg" /></a>
+            <a href="./movies/love.html"><img src="./images/loveactually/loveactually-poster.jpg" /></a>
+            <a href="./movies/broke.html"><img src="./images/brokebackmountain/brokebackmountain-poster.jpg" /></a>
+            <a href="tvshow/queensgambit.html"><img src="images/queensgambit/queensgambit-poster.jpg" /></a>
+            <a href="tvshow/wednesday.html"><img src="images/wednesday/wednesday-poster.jpg" /></a>
+            <a href="tvshow/theoffice.html"><img src="images/theoffice/theoffice-poster.jpg" /></a>
+            <a href="tvshow/crashlandingonyou.html"><img src="images/crashlandingonyou/crashlandingonyou-poster.jpg" /></a>
+            <a href="tvshow/startup.html"><img src="images/startup/starup-poster.jpg" /></a>
+            <a href="tvshow/goblin.html"><img src="images/goblin/goblin-poster.jpg" /></a>
+            
+
+          </div>
+          <button class="scroll-btn right">&#8250;</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <footer class="poppin-footer">
+    <!-- Top Footer: Logo + Links -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+        <span class="footer-brand">Poppin'</span>
+      </div>
+
+      <!-- Overview & Support Links -->
+      <div class="footer-right">
+        <div class="footer-columns">
+
+          <!-- Overview Columns -->
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support Column -->
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let slideIndex = 0;
+
+    function showNextSlide() {
+      slides.forEach((slide) => slide.classList.remove('active'));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 5000);
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.carousel').forEach(carousel => {
+        const scrollRow = carousel.querySelector('.scroll-row');
+        const leftBtn = carousel.querySelector('.scroll-btn.left');
+        const rightBtn = carousel.querySelector('.scroll-btn.right');
+        const scrollAmount = 300;
+
+        leftBtn?.addEventListener('click', () => {
+          scrollRow.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        rightBtn?.addEventListener('click', () => {
+          scrollRow.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+  
+
+</body>
+
+</html>

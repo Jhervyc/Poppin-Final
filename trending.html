@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Icons/popcorn.png" type="image/png">
+    <title>Poppin'- Trending</title>
+    <link rel="stylesheet" href="CSS/base.css" />
+    <link rel="stylesheet" href="CSS/trending.css">
+    <script src="JS/poppin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard hidden">
+        <aside class="sidebar">
+            <div class="logo"><img src="Icons/popcorn.png" id="LogoIcon">Poppin'</div>
+            <nav>
+                <ul>
+                <li><a href="landing.html"><img src="./Icons/home.png" id="homeIcon"> Home</a></li>
+                <li><a href="categories.html"><img src="Icons/Genre.png" id="genreIcon"> Categories</a></li>
+                <li><a href="trending.html"><img src="Icons/trending.png" id="trendIcon"> Trending</a></li>
+                </ul>
+            </nav>
+
+            <div class="section">
+                <p class="section-title">My Library</p>
+                <ul>
+                <li><a href="favorites.html"><img src="Icons/favorite.png" id="favIcon"> Favorites</a></li>
+                <li><a href="watchlist.html"><img src="Icons/later.png" id="laterIcon"> Watchlist</a></li>
+                <li><a href="history.html"><img src="Icons/watch.png" id="watchIcon"> History</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <p class="section-title">Settings</p>
+                <ul>
+                <li><a href="account.html">⚙️ Account</a></li>
+                <li><a href="#">🚪 Log Out</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="tabs">
+                    <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+                    <a href="homepage.html"><span>All</span></a>
+                    <a href="tvshows.html"><span>TV Shows</span></a>
+                    <a href="movies.html"><span>Movies</span></a>
+                    <a href="newrelease.html"><span>New Release</span></a>
+                </div>
+                <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+                    <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                        aria-label="Search movies" required />
+                        <button type="submit">Search</button>
+                </form>
+            </header>
+
+            <script>
+                const toggleBtn = document.getElementById('toggleMenu');
+                const dashboard = document.querySelector('.dashboard');
+
+                toggleBtn.addEventListener('click', () => {
+                    dashboard.classList.toggle('hidden');
+                });
+            </script>
+
+            
+        <section class="trending-section">
+            <div class="trending-header">
+                <h1>
+                    <img src="./Icons/trending.png" alt="Fire Icon" class="inline-icon">
+                    Trending
+                </h1>
+            </div>
+        
+
+            <section class="carousel topm">
+                <h2>Popular This Week</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="trending_html/Bet.html"><img src="images/this week/Bet.jpg" /></a>
+                    <a href="bringherback.html"><img src="images/this week/bringherback.webp" /></a>
+                    <a href="finalPoster.html"><img src="images/this week/finalPoster.jpg" /></a>
+                    <a href="Mission.html"><img src="images/this week/Mission.jpg" /></a>
+                    <a href="karate.html"><img src="images/this week/karate.webp" /></a>
+                    <a href="widows.html"><img src="images/this week/widows.webp" /></a>
+                    <a href="sinners.html"><img src="images/this week/sinners.webp" /></a>
+                    <a href="fountain-of-youth.html"><img src="images/this week/fountain-of-youth.webp" /></a>
+                    <a href="mountainhead.html"><img src="images/this week/mountain-head.webp" /></a>
+                    <a href="promqueen.html"><img src="images/this week/promqueen.webp" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+            <section class="carousel topm">
+                <h2>Top Grossing Film This Year</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="trending_html/minecraft.html"><img src="images/this year/minecraft.webp" /></a>
+                    <a href="captain-america.html"><img src="images/this year/captain-america.webp" /></a>
+                    <a href="companion.html"><img src="images/this year/companion.webp" /></a>
+                    <a href="mickey17.html"><img src="images/this year/mickey17.webp" /></a>
+                    <a href="accountant.html"><img src="images/this year/accountant.webp" /></a>
+                    <a href="nezha.html"><img src="images/this year/nezha.webp" /></a>
+                    <a href="snowwhite.html"><img src="images/this year/snowwhite.webp" /></a>
+                    <a href="thunderbolts.html"><img src="images/this year/thunderbolts.webp" /></a>
+                    <a href="sinners.html"><img src="images/this year/sinners.webp" /></a>
+                    <a href="mission.html"><img src="images/this year/Mission.jpg" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+            <section class="carousel topm">
+                <h2>Top Grossing Film of All Time</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="trending_html/insideout.html"><img src="images/all time/insideout.webp" /></a>
+                    <a href="avengers.html"><img src="images/all time/avengers.webp" /></a>
+                    <a href="frozen2.html"><img src="images/all time/frozen2.webp" /></a>
+                    <a href="avatar.html"><img src="images/all time/avatar.webp" /></a>
+                    <a href="split.html"><img src="images/all time/split.jpg" /></a>
+                    <a href="notebook.html"><img src="images/all time/notebook.jpg" /></a>
+                    <a href="spiderman.html"><img src="images/all time/spiderman.webp" /></a>
+                    <a href="the-greatest-showman.html"><img src="images/all time/the-greatest-showman.png" /></a>
+                    <a href="titanic.html"><img src="images/all time/titanic.webp" /></a>
+                    <a href="starwars.html"><img src="images/all time/starwars.webp" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+
+    <footer class="poppin-footer">
+    <!-- Top Footer: Logo + Links -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+        <span class="footer-brand">Poppin'</span>
+      </div>
+
+      <!-- Overview & Support Links -->
+      <div class="footer-right">
+        <div class="footer-columns">
+
+          <!-- Overview Columns -->
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support Column -->
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

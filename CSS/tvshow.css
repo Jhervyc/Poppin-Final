@@ -1,0 +1,368 @@
+
+
+/* Movie Section */
+.movieTitle {
+  padding-top: 3%;
+  padding-left: 3%;
+  font-size: larger;
+  color: #FFCC00;
+}
+
+.sypnosis {
+  text-align: justify;
+  padding-left: 3%;
+  padding-right: 6%;
+}
+
+/* Featured Trailer and Poster */
+
+.featured{
+  margin: 0 auto;
+  width: 95%;
+  /* max-width: 1440px; */
+}
+
+.trailer video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  
+}
+
+.upper-section{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.lower-section {
+  display: flex;
+  gap: 5%;
+}
+.trailer, .summary {
+  width: 70%;
+}
+
+.side-poster, .details{
+  width: 25%;
+  
+}
+
+.side-poster img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: 20px;
+}
+.summary h2 {
+  color: #FFCC00;
+  font-size:medium ;
+}
+
+.details p {
+  margin-bottom: -10px;
+}
+
+.details b {
+  color: #FFCC00;
+}
+
+/* for tvshows */
+.episode-section {
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.episode-header {
+  display: flex;
+  align-items: center;
+  padding-left: 3%;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #FFCC00;
+  color: black;
+  font-weight: bold;
+  /* max-width: 1440px; */
+  margin: 0 auto;
+}
+
+.episode-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  max-width: 1440px;
+}
+
+.episode{
+  width: 32%;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.episode video {
+  width: 100%;
+  height: auto;
+}
+
+.episode span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* mga dinagdag ko */
+.hero-container{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  margin: 3rem auto;
+  width: 100%;
+  aspect-ratio: 16/9;
+  
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  animation: fadeCycle 30s infinite;
+}
+
+@keyframes fadeCycle {
+  0%   { opacity: 0; pointer-events: none;}
+  10%  { opacity: 1; pointer-events: auto; }
+  30%  { opacity: 1; pointer-events: auto;}
+  40%  { opacity: 0; pointer-events: none;}
+  100% { opacity: 0; pointer-events: none;}
+}
+
+.hero1{
+  background-image: 
+    linear-gradient(to right,#121212 20%, transparent 70%),
+    linear-gradient(to top, #121212, transparent 10%),
+    linear-gradient(to bottom, #121212, transparent 10%),
+    linear-gradient(to left, #121212, transparent 10%),
+    url('../images/frieren/frieren-bg.jpg');
+    background-size: cover;
+  animation-delay: 0s;
+  z-index: 3;
+}
+
+.hero2 {
+  background-image: 
+    linear-gradient(to right,#121212 20%, transparent 70%),
+    linear-gradient(to top, #121212, transparent 10%),
+    linear-gradient(to bottom, #121212, transparent 10%),
+    linear-gradient(to left, #121212, transparent 10%),
+    url('../images/brooklyn99/brooklyn99-bg.jpg');
+    background-size: cover;
+    animation-delay: 10s;
+    z-index: 2;
+}
+
+.hero3 {
+  background-image: 
+    linear-gradient(to right,#121212 20%, transparent 70%),
+    linear-gradient(to top, #121212, transparent 10%),
+    linear-gradient(to bottom, #121212, transparent 10%),
+    linear-gradient(to left, #121212, transparent 10%),
+    url('../images/startup/startup-bg.jpg');
+    background-size: cover;
+    z-index: 1;
+    animation-delay: 20s;
+}
+
+.hero-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero-info img {
+  width: 100%;
+}
+
+.hero-info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.hero-genre {
+  font-weight: bold;
+}
+
+.hero-sypnosis {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.hero-info button{
+  color: black;
+  background-color: #FFCC00;
+  font-size: 15px;
+  font-weight: bolder;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.hero-poster{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero-poster img {
+  width: 50%;
+  height: auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Carousel */
+.carousel {
+  margin-top: 5%;
+}
+
+.carousel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scroll-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  gap: 10px;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  height: 200px;
+}
+
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}
+.scroll-row {
+  scrollbar-width: none;
+}
+
+.scroll-row img {
+  height: 200px;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.scroll-row img:hover {
+  transform: scale(1.05);
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+  .hero-sypnosis{
+    display: none;
+  }
+  .hero-info{
+    font-size: .5rem;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 220px;
+  }
+
+  .trailer iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .side-poster img {
+    height: 300px;
+    width: 225px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .featured {
+    flex-direction: column;
+  }
+
+  .side-poster img {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+
+  .scroll-row {
+    height: 140px;
+  }
+
+  .scroll-row img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-row {
+    height: 120px;
+  }
+
+  .scroll-row img {
+    height: 120px;
+  }
+}
+
+

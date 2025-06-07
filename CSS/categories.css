@@ -1,0 +1,212 @@
+.categories-section {
+    padding: 20px; 
+    margin-bottom: 30px;
+    display: block;
+}
+
+.categories-section.active-section {
+    display: block;
+}
+
+.categories-section h2 {
+    color: #e0e0e0;
+    font-size: 3em;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.inlineicon {
+    width: 40px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 25px;
+    margin-right: 2px;
+}
+
+.category-item {
+    background-color: #2a2a2a; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 130px; 
+    width: 220px;
+    border: 1px solid #3a3a3a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.category-item:hover {
+    background-color: white; 
+    transform: translateY(-5px); 
+}
+
+.category-item:hover p {
+    color: #ffcc00;
+}
+
+.category-item p {
+    color: #f0f0f0; 
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0;
+    padding: 0 10px; 
+    white-space: normal;
+    overflow: hidden;
+    text-transform: ellipsis;
+    z-index: 2;
+    position: relative;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.category-item.action-adventure {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/actionc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.anime {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/animec.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.horror-thriller {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/horrorc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.comedy {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/comedyc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.crime {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/crimec.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.documentary {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/documentariesc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.drama {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/dramac.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.kids {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/kidsc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.mystery {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/mysteryc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.scifi {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/scific.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.family {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/familyc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.romance {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/romancec.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.musical {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/musicalc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.western {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/westernc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.sports {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/sportsc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-item.classics {
+  background:
+  linear-gradient(to top, black, transparent),
+  url('../images/imagesc/classicsc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+

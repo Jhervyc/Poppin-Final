@@ -1,0 +1,273 @@
+/* MAIN CONTAINER */
+.main-container {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.side {
+  flex: 1 1 300px;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+
+.right-section {
+  flex: 2 1 600px;
+  box-sizing: border-box;
+}
+
+/* PROFILE */
+.side-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar img {
+  width: 100px;
+  border-radius: 20px;
+}
+
+.profile-info ul {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.side ul {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.side li {
+  font-size: 12px;
+  font-weight: normal;
+  color: #aaa;
+}
+
+/* GRAPH CONTAINER */
+.graph-container {
+  width: 100%;
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+
+.chart-header h2 {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chart-header p {
+  margin: 5px 0 15px;
+  font-size: 23px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chart-header span {
+  color: #1db954;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* BAR CHART */
+.bar-chart {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-left: 1px solid #555;
+  border-bottom: 1px solid #555;
+  padding-left: 5%;
+  display: flex;
+  align-items: flex-end;
+  gap: 2%;
+  box-sizing: border-box;
+}
+
+.grid-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  z-index: 1;
+}
+
+.grid-line-label {
+  position: absolute;
+  left: -18px;
+  font-size: 10px;
+  color: #888;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.grid-line-5 { top: 0%; }
+.grid-line-4 { top: 20%; }
+.grid-line-3 { top: 40%; }
+.grid-line-2 { top: 60%; }
+.grid-line-1 { top: 80%; }
+
+.bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.bar {
+  width: 25px;
+  background-color: #b0060f;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.labels-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  box-sizing: border-box;
+}
+
+.labels-container .label {
+  font-size: 10px;
+  color: #aaa;
+  text-align: center;
+  width: 25px;
+  user-select: none;
+}
+
+/* DEVICES USED */
+.devices-used-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+.device-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 15px;
+  flex: 1 1 200px;
+  max-width: 240px;
+  height: auto;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.device-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.device-name {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.device-percent {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b0060f;
+}
+
+.devices-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+/* RESPONSIVE OVERRIDES */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 220px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side,
+  .right-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .bar-chart {
+    gap: 1%;
+  }
+
+  .device-card {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .profile-info ul {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .device-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .device-name {
+    font-size: 16px;
+  }
+
+  .device-percent {
+    font-size: 12px;
+  }
+
+  .bar {
+    width: 20px;
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Icons/popcorn.png" type="image/png">
+    <title>Poppin'</title>
+    <link rel="stylesheet" href="../CSS/base.css" />
+    <link rel="stylesheet" href="../CSS/tvshow.css">
+    <script src="../JS/poppin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard hidden">
+        <aside class="sidebar">
+            <div class="logo"><img src="../Icons/popcorn.png" id="LogoIcon">Poppin'</div>
+            <nav>
+                <ul>
+                <li><a href="../landing.html"><img src="../Icons/home.png" id="homeIcon"> Home</a></li>
+                <li><a href="../categories.html"><img src="../Icons/Genre.png" id="genreIcon"> Categories</a></li>
+                <li><a href="../trending.html"><img src="../Icons/trending.png" id="trendIcon"> Trending</a></li>
+                </ul>
+            </nav>
+
+            <div class="section">
+                <p class="section-title">My Library</p>
+                <ul>
+                <li><a href="../favorites.html"><img src="../Icons/favorite.png" id="favIcon"> Favorites</a></li>
+                <li><a href="../watchlist.html"><img src="../Icons/later.png" id="laterIcon"> Watchlist</a></li>
+                <li><a href="../history.html"><img src="../Icons/watch.png" id="watchIcon"> History</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <p class="section-title">Settings</p>
+                <ul>
+                <li><a href="account.html">⚙️ Account</a></li>
+                <li><a href="#">🚪 Log Out</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="tabs">
+                    <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+                    <a href="../homepage.html"><span>All</span></a>
+                    <a href="../tvshows.html"><span>TV Shows</span></a>
+                    <a href="../movies.html"><span>Movies</span></a>
+                    <a href="../newrelease.html"><span>New Release</span></a>
+                </div>
+                <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+                    <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                        aria-label="Search movies" required />
+                        <button type="submit">Search</button>
+                </form>
+            </header>
+
+            <script>
+                const toggleBtn = document.getElementById('toggleMenu');
+                const dashboard = document.querySelector('.dashboard');
+
+                toggleBtn.addEventListener('click', () => {
+                    dashboard.classList.toggle('hidden');
+                });
+            </script>
+
+            <section class="movieTitle">
+                <h1>Carrie</h1>
+            </section>
+
+            <section class="featured">
+                <div class="upper-section">
+                    <div class="trailer">
+                        <video controls autoplay>
+                            <source src="../videos/carrie/carrie-movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="side-poster">
+                        <img src="../images/carrie/carrie-poster.jpg" alt="Poster">
+                    </div>
+                </div>
+
+                <div class="lower-section">
+                    <div class="summary">
+                        <h2>Summary</h2>
+                        <p>"Carrie" is a supernatural horror story about a shy high school girl with telekinetic powers. After a traumatic experience at prom, Carrie unleashes her powers in a terrifying and unforgettable climax. The story explores themes of bullying, revenge, and the struggle to belong.</p>
+                    </div>
+                    <div class="details">
+                        <p><b>Title:</b> Carrie</p>
+                        <p><b>Type:</b> Movie</p>
+                        <p><b>Genre:</b> Horror</p>
+                        <p><b>Duration:</b> 98 minutes</p>
+                        <p><b>Year:</b> 1976</p>
+                        <p><b>Studio:</b> United Artists</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="carousel topm">
+                <h2>Recommended For You</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                        <a href="./movies/homealone.html"><img src="../images/homealone/homealone-poster.jpg" /></a>
+                        <a href="./movies/dead.html"><img src="../images/deadpoolwolvarine/deadpoolwolvarine-poster.jpg" /></a>
+                        <a href="./movies/nosferatu.html"><img src="../images/nosferatu/nosferatu-poster.jpg" /></a>
+                        <a href="./movies/broke.html"><img src="../images/brokebackmountain/brokebackmountain-poster.jpg" /></a>
+                        <a href="./movies/10.html"><img src="../images/10things/10things-poster.jpg" /></a>
+                        <a href="./movies/us.html"><img src="../images/us/us-poster.jpg" /></a>
+                        <a href="./movies/love.html"><img src="../images/loveactually/loveactually-poster.jpg" /></a>
+                        <a href="./movies/shining.html"><img src="../images/shining/shining-poster.jpg" /></a>
+                        <a href="./movies/lala.html"><img src="../images/lalaland/lalaland-poster.jpg" /></a>
+                        <a href="./movies/13.html"><img src="../images/13goingon30/13goingon30-poster.jpg" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+  <footer class="poppin-footer">
+    <!-- Top Footer: Logo + Links -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+        <span class="footer-brand">Poppin'</span>
+      </div>
+
+      <!-- Overview & Support Links -->
+      <div class="footer-right">
+        <div class="footer-columns">
+
+          <!-- Overview Columns -->
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support Column -->
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

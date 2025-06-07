@@ -1,0 +1,111 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.70);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #080808;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  position: relative;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.popup-content img {
+  width: 75px;
+  margin-bottom: 20px;
+}
+
+.popup-content h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="password"],
+.popup-content input[type="number"],
+.popup-content input[type="tel"],
+.popup-content input[type="email"]{
+  width: 300px;
+  padding: 12px;
+  margin: 8px 0;
+  background-color: #222;
+  border: none;
+  color: white;
+}
+
+.primary-btn,
+.secondary-btn {
+  width: 300px;
+  padding: 12px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.primary-btn {
+  background-color: rgb(255, 191, 0);
+  color: white;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 1px solid red;
+  color: red;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: #ccc;
+  margin: 10px 0 5px 0;
+  padding-left: 20px;
+  width: 300px;
+}
+
+.remember-container {
+  display: flex;
+  align-items: justify;
+  gap: 5px;
+}
+
+.forgot-password {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+

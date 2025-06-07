@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="./Icons/popcorn.png" type="image/png" />
+  <title>Poppin'</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./CSS/landingpage.css" />
+  <link rel="stylesheet" href="./CSS/popup.css" />
+</head>
+  
+<body>
+
+  <!-- Landing Page -->
+  <header>
+    <section>
+      <div class="logo-container">
+        <img src="./Icons/popcorn.png" id="landinglogo" alt="Poppin Logo" />
+        <h1 class="bouncy-text">
+          <span>P</span><span>o</span><span>p</span><span>p</span><span>i</span><span>n</span><span>'</span><br>
+        </h1>
+        <br>
+        <p class="lead">Watch. Discover. Repeat</p>
+      </div>
+    </section>
+  </header>
+
+<!-- Search -->
+
+  <button class="btn" id="exploreBtn" aria-label="Explore Now">Explore Now</button>
+
+  <!-- Popup Sign In and Sign Up -->
+   <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="togglePopup()">&times;</span>
+
+
+  <!-- Sign In -->
+      <form id="signInBox" method="post">
+        <div class="logoUp">
+          <img src="./Icons/popcorn.png" alt="Poppin Logo" />
+          <h2>Sign in to Poppin'</h2>
+        </div>
+
+        <input type="text" placeholder="Email or phone number" required />
+        <input type="password" placeholder="Password" required />
+
+        <div class="options">
+          <div class="remember-container">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="primary-btn">Sign In</button>
+        <button type="button" class="secondary-btn" onclick="switchToSignUp()">Sign Up</button>
+      </form>
+
+      <script>
+    document.getElementById('signInBox').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent page reload
+
+      const emailInput = this.querySelector('input[type="text"]');
+      const passwordInput = this.querySelector('input[type="password"]');
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      if (!email) {
+        alert('Please enter your email or phone number.');
+        emailInput.focus();
+        return;
+      }
+      if (!password) {
+        alert('Please enter your password.');
+        passwordInput.focus();
+        return;
+      }
+
+      if (email === 'poppinadmin@gmail.com' && password === 'poppinadmin') {
+        window.location.href = 'homePage.html';
+      } else {
+        alert('Invalid email or password.');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    });
+  </script>
+
+      <form id="signUpForm" onsubmit="validatePasswords(event)">
+        <!-- Sign Up -->
+        <div id="signUpBox" class="hidden">
+          <img src="./Icons/popcorn.png" alt="Poppin Logo" />
+          <h2>Start your free 30-day trial</h2>
+          <input type="tel" placeholder="Credit Card Number" required />
+          <input type="text" placeholder="Email or phone number" required />
+          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Repeat Password" required />
+          <button type="submit" class="primary-btn">Sign Up</button>
+          <button class="secondary-btn" onclick="switchToSignIn()">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<footer>
+  &copy; 2025 Poppin'. All rights reserved.
+</footer>
+
+<script src="./JS/popup.js" defer></script>
+<script src="./landing.js" defer></script>
+
+</body>
+</html>
