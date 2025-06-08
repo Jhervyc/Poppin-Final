@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Icons/popcorn.png" type="image/png">
+    <title>Poppin'</title>
+    <link rel="stylesheet" href="../CSS/base.css" />
+    <link rel="stylesheet" href="../CSS/tvshow.css">
+    <script src="../JS/poppin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard hidden">
+        <aside class="sidebar">
+            <div class="logo"><a href="../homepage.html"><img src="../Icons/popcorn.png" id="LogoIcon">Poppin'</a></div>
+            <nav>
+                <ul>
+                <li><a href="../homepage.html"><img src="../Icons/home.png" id="homeIcon"> Home</a></li>
+                <li><a href="../categories.html"><img src="../Icons/Genre.png" id="genreIcon"> Categories</a></li>
+                <li><a href="../trending.html"><img src="../Icons/trending.png" id="trendIcon"> Trending</a></li>
+                </ul>
+            </nav>
+
+            <div class="section">
+                <p class="section-title">My Library</p>
+                <ul>
+                <li><a href="../favorites.html"><img src="../Icons/favorite.png" id="favIcon"> Favorites</a></li>
+                <li><a href="../watchlist.html"><img src="../Icons/later.png" id="laterIcon"> Watchlist</a></li>
+                <li><a href="../history.html"><img src="../Icons/watch.png" id="watchIcon"> History</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <p class="section-title">Settings</p>
+                <ul>
+                <li><a href="../account.html">⚙️ Account</a></li>
+                <li><a href="../landing.html">🚪 Log Out</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="tabs">
+                    <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+                    <a href="../homepage.html"><span>All</span></a>
+                    <a href="../tvshows.html"><span>TV Shows</span></a>
+                    <a href="../movies.html"><span>Movies</span></a>
+                    <a href="../newrelease.html"><span>New Release</span></a>
+                </div>
+                <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+                    <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                        aria-label="Search movies" required />
+                    <button type="submit">Search</button>
+                </form>
+            </header>
+
+            <script>
+                const toggleBtn = document.getElementById('toggleMenu');
+                const dashboard = document.querySelector('.dashboard');
+                toggleBtn.addEventListener('click', () => {
+                    dashboard.classList.toggle('hidden');
+                });
+            </script>
+
+            <section class="movieTitle">
+                <h1>Itaewon Class</h1>
+            </section>
+
+            <section class="featured">
+                <div class="upper-section">
+                    <div class="trailer">
+                        <video controls autoplay>
+                            <source src="../videos/itaewonclass/itaewonclass-trailer.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="side-poster">
+                        <img src="../images/itaewonclass/itaewonclass-poster.jpg" alt="Poster">
+                    </div>
+                </div>
+
+                <div class="lower-section">
+                    <div class="summary">
+                        <h2>Summary</h2>
+                        <p>"Itaewon Class" is a South Korean drama about an ex-convict who opens a bar-restaurant in the Itaewon neighborhood of Seoul, aiming to challenge a powerful food conglomerate. The story explores themes of revenge, friendship, love, and social justice.</p>
+                    </div>
+                    <div class="details">
+                        <p><b>Title:</b> Itaewon Class</p>
+                        <p><b>Type:</b> TV Show</p>
+                        <p><b>Genre:</b> K-Drama, Drama, Romance</p>
+                        <p><b>Episodes:</b> 16</p>
+                        <p><b>Duration:</b> Approx. 60 minutes</p>
+                        <p><b>Year:</b> 2020</p>
+                        <p><b>Studio:</b> JTBC</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="episode-section">
+                <div class="episode-header"> Episodes (5)</div>
+                <div class="episode-container">
+                    <div class="episode">
+                        <span class="episode-number">Episode 1</span>
+                        <video controls>
+                            <source src="../videos/itaewonclass/itaewonclass-episode1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="episode">
+                        <span class="episode-number">Episode 2</span>
+                        <video controls>
+                            <source src="../videos/itaewonclass/itaewonclass-episode2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="episode">
+                        <span class="episode-number">Episode 3</span>
+                        <video controls>
+                            <source src="../videos/itaewonclass/itaewonclass-episode3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="episode">
+                        <span class="episode-number">Episode 4</span>
+                        <video controls>
+                            <source src="../videos/itaewonclass/itaewonclass-episode4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="episode">
+                        <span class="episode-number">Episode 5</span>
+                        <video controls>
+                            <source src="../videos/itaewonclass/itaewonclass-episode5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Carousel section remains unchanged -->
+            <section class="carousel topm">
+                <h2>Recommended For You</h2>
+                <div class="carousel-container">
+                    <button class="scroll-btn left">&#10094;</button> 
+                    <div class="scroll-row">
+                    <a href="frieren.html"><img src="../images/frieren/frieren-poster.jpg" /></a>
+                    <a href="brooklyn99.html"><img src="../images/brooklyn99/brooklyn99-poster.jpg" /></a>
+                    <a href="startup.html"><img src="../images/startup/starup-poster.jpg" /></a>
+                    <a href="vinlandsaga.html"><img src="../images/vinlandsaga/vinlandsaga-poster.jpg" /></a>
+                    <a href="probinsyano.html"><img src="../images/probinsyano/probinsyano-poster.jpg" /></a>
+                    <a href="mandalorian.html"><img src="../images/mandalorian/mandalorian-poster.jpg" /></a>
+                    <a href="queengambit.html"><img src="../images/queensgambit/queensgambit-poster.jpg" /></a>
+                    <a href="grandblue.html"><img src="../images/grandblue/grandblue-poster.jpg" /></a>
+                    <a href="theoffice.html"><img src="../images/theoffice/theoffice-poster.jpg" /></a>
+                    <a href="breakingbad.html"><img src="../images/breakingbad/breakingbad-poster.jpg" /></a>
+                    <a href="crashlandingonyou.html"><img src="../images/crashlandingonyou/crashlandingonyou-poster.jpg" /></a>
+                    <a href="mushokutensei.html"><img src="../images/mushokutensei/mushokutensei-poster.jpg" /></a>
+                    <a href="probinsyano.html"><img src="../images/probinsyano/probinsyano-poster.jpg" /></a>
+                    <a href="saikik.html"><img src="../images/saikik/saikik-poster.jpg" /></a>
+                    <a href="itaewonclass.html"><img src="../images/itaewonclass/Itaewonclass-poster.jpg" /></a>
+                    <a href="encantadia.html"><img src="../images/encantandia/encantadia-poster.jpg" /></a>
+                    <a href="startup.html"><img src="../images/startup/starup-poster.jpg" /></a>
+                    <a href="grandblue.html"><img src="../images/grandblue/grandblue-poster.jpg" /></a>
+                    <a href="killerparadox.html"><img src="../images/killerparadox/killerparadox-poster.jpg" /></a>
+                    <a href="onthewingsoflove.html"><img src="../images/onthewingsolove/onthewingsoflove-poster.jpg" /></a>
+                    </div>
+                    <button class="scroll-btn right">&#10095;</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="poppin-footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+                <span class="footer-brand">Poppin'</span>
+            </div>
+            <div class="footer-right">
+                <div class="footer-columns">
+                    <div class="footer-column overview">
+                        <h3 class="footer-heading">Overview</h3>
+                        <div class="overview-links">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Digital Services Act</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Cookies Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-column support">
+                        <h3 class="footer-heading">Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Report a Bug</a></li>
+                            <li><a href="#">Account Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h3 class="follow-us-heading">Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+            </div>
+            <p>&copy; 2025 Poppin'. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
