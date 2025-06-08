@@ -303,6 +303,12 @@
   right: 10px;
 }
 
+.carousel-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
 
 /* Responsive */
 @media (max-width: 1200px) {

@@ -111,6 +111,13 @@
   padding: 8px;
 }
 
+.carousel-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
 @media (max-width: 768px) {
    .carousel h2 {
     font-size: 1.3rem;
