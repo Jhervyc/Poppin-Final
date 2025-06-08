@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="Icons/popcorn.png" type="image/png">
+    <title>Poppin' - Horror</title>
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/favorites.css">
+    <script src="JS/poppin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard hidden">
+        <aside class="sidebar">
+            <div class="logo"><img src="Icons/popcorn.png" id="LogoIcon">Poppin'</div>
+            <nav>
+                <ul>
+                <li><a href="landing.html"><img src="./Icons/home.png" id="homeIcon"> Home</a></li>
+                <li><a href="categories.html"><img src="Icons/Genre.png" id="genreIcon"> Categories</a></li>
+                <li><a href="trending.html"><img src="Icons/trending.png" id="trendIcon"> Trending</a></li>
+                </ul>
+            </nav>
+
+            <div class="section">
+                <p class="section-title">My Library</p>
+                <ul>
+                <li><a href="favorites.html"><img src="Icons/favorite.png" id="favIcon"> Favorites</a></li>
+                <li><a href="watchlist.html"><img src="Icons/later.png" id="laterIcon"> Watchlist</a></li>
+                <li><a href="history.html"><img src="Icons/watch.png" id="watchIcon"> History</a></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <p class="section-title">Settings</p>
+                <ul>
+                <li><a href="account.html">⚙️ Account</a></li>
+                <li><a href="#">🚪 Log Out</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="tabs">
+                    <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+                    <a href="homepage.html"><span>All</span></a>
+                    <a href="tvshows.html"><span>TV Shows</span></a>
+                    <a href="movies.html"><span>Movies</span></a>
+                    <a href="newrelease.html"><span>New Release</span></a>
+                </div>
+                <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+                    <input type="search" id="searchInput" name="search" placeholder="Search movies..."
+                        aria-label="Search movies" required />
+                        <button type="submit">Search</button>
+                </form>
+            </header>
+
+            <script>
+                const toggleBtn = document.getElementById('toggleMenu');
+                const dashboard = document.querySelector('.dashboard');
+
+                toggleBtn.addEventListener('click', () => {
+                    dashboard.classList.toggle('hidden');
+                });
+            </script>
+
+            <section class="favorites-section">
+                <div class="favorites-header">
+                    <h1>
+                       👻 Horror/Thrillers
+                    </h1>
+                </div>
+
+                <div class="category-section">
+                <div class="category-header">
+                    <h2 class="category-title">Movies</h2>
+                </div>
+                <div class="watchlist-grid">
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/carrie/carrie-poster.jpg" /></a>
+                    </div>  
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/conjuring/conjuring-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/exorcist/exorcist-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/split/split-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/us/us-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/sinners/sinners-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/shining/shining-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/americanpsycho/americanpsycho-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/it/it-poster.jpg" /></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="./movies/carrie.html"><img src="./images/nosferatu/nosferatu-poster.jpg" /></a>
+                    </div>
+
+                </div>
+                </div>
+
+                <div class="category-section">
+                <div class="category-header">
+                    <h2 class="category-title">TV Shows</h2>
+                </div>
+                <div class="watchlist-grid">
+                    <div class="watchlist-item">
+                        <a href="tvshow/killerparadox.html"><img src="images/killerparadox/killerparadox-poster.jpg" alt="TV Show Poster"></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="tvshow/breakingbad.html"><img src="images/breakingbad/breakingbad-poster.jpg" alt="TV Show Poster"></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="tvshow/wednesday.html"><img src="images/wednesday/wednesday-poster.jpg" alt="TV Show Poster"></a>
+                    </div>
+                    <div class="watchlist-item">
+                        <a href="tvshow/goblin.html"><img src="images/goblin/goblin-poster.jpg" alt="TV Show Poster"></a>
+                    </div>
+                    
+                </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="poppin-footer">
+    <!-- Top Footer: Logo + Links -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo">
+        <span class="footer-brand">Poppin'</span>
+      </div>
+
+      <!-- Overview & Support Links -->
+      <div class="footer-right">
+        <div class="footer-columns">
+
+          <!-- Overview Columns -->
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support Column -->
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter"></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
