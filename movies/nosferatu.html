@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../Icons/popcorn.png" type="image/png" />
+  <title>Poppin'</title>
+  <link rel="stylesheet" href="../CSS/base.css" />
+  <link rel="stylesheet" href="../CSS/tvshow.css" />
+  <script src="../JS/poppin.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard hidden">
+    <aside class="sidebar">
+      <div class="logo"><a href="../homepage.html"><img src="../Icons/popcorn.png" id="LogoIcon">Poppin'</a></div>
+      <nav>
+        <ul>
+          <li><a href="../homepage.html"><img src="../Icons/home.png" id="homeIcon"> Home</a></li>
+          <li><a href="../categories.html"><img src="../Icons/Genre.png" id="genreIcon"> Categories</a></li>
+          <li><a href="../trending.html"><img src="../Icons/trending.png" id="trendIcon"> Trending</a></li>
+        </ul>
+      </nav>
+
+      <div class="section">
+        <p class="section-title">My Library</p>
+        <ul>
+          <li><a href="../favorites.html"><img src="../Icons/favorite.png" id="favIcon"> Favorites</a></li>
+          <li><a href="../watchlist.html"><img src="../Icons/later.png" id="laterIcon"> Watchlist</a></li>
+          <li><a href="../history.html"><img src="../Icons/watch.png" id="watchIcon"> History</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <p class="section-title">Settings</p>
+        <ul>
+          <li><a href="../account.html">⚙️ Account</a></li>
+          <li><a href="../landing.html">🚪 Log Out</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="tabs">
+          <button id="toggleMenu" aria-label="Toggle menu">☰</button>
+          <a href="../homepage.html"><span>All</span></a>
+          <a href="../tvshows.html"><span>TV Shows</span></a>
+          <a href="../movies.html"><span>Movies</span></a>
+          <a href="../newrelease.html"><span>New Release</span></a>
+        </div>
+        <form id="searchForm" class="search-form" role="search" aria-label="Search Movies">
+          <input type="search" id="searchInput" name="search" placeholder="Search movies..." aria-label="Search movies" required />
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <script>
+        const toggleBtn = document.getElementById('toggleMenu');
+        const dashboard = document.querySelector('.dashboard');
+        toggleBtn.addEventListener('click', () => {
+          dashboard.classList.toggle('hidden');
+        });
+      </script>
+
+      <section class="movieTitle">
+        <h1>Nosferatu</h1>
+      </section>
+
+      <section class="featured">
+        <div class="upper-section">
+          <div class="trailer">
+            <video controls autoplay>
+              <source src="../videos/nosferatu/nosferatu-movie.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="side-poster">
+            <img src="../images/nosferatu/nosferatu-poster.jpg" alt="Poster" />
+          </div>
+        </div>
+
+        <div class="lower-section">
+          <div class="summary">
+            <h2>Summary</h2>
+            <p>"Nosferatu" is a landmark 1922 silent horror film that tells the eerie story of Count Orlok, a vampire who brings terror to a small town. This German Expressionist classic remains one of cinema’s most iconic and haunting portrayals of vampirism and supernatural dread.</p>
+          </div>
+          <div class="details">
+            <p><b>Title:</b> Nosferatu</p>
+            <p><b>Type:</b> Movie</p>
+            <p><b>Genre:</b> Horror, Silent, Classic</p>
+            <p><b>Duration:</b> 94 minutes</p>
+            <p><b>Year:</b> 1922</p>
+            <p><b>Studio:</b> Prana Film</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel topm">
+        <h2>Recommended For You</h2>
+        <div class="carousel-container">
+          <button class="scroll-btn left">&#10094;</button>
+          <div class="scroll-row">
+            <a href="easya.html"><img src="../images/easya/easya-poster.jpg" /></a>
+            <a href="homealone.html"><img src="../images/homealone/homealone-poster.jpg" /></a>
+            <a href="13goingon30.html"><img src="../images/13goingon30/13goingon30-poster.jpg" /></a>
+            <a href="superbad.html"><img src="../images/superbad/superbad-poster.jpg" /></a>
+            <a href="deadpoolwolvarine.html"><img src="../images/deadpoolwolvarine/deadpoolwolvarine-poster.jpg" /></a>
+            <a href="dumbanddumber.html"><img src="../images/dumbanddumber/dumbanddumber-poster.jpg" /></a>
+            <a href="shrek.html"><img src="../images/shrek/shrek-poster.jpg" /></a>
+            <a href="zoolander.html"><img src="../images/zoolander/zoolander-poster.jpg" /></a>
+            <a href="loveactually.html"><img src="../images/loveactually/loveactually-poster.jpg" /></a>
+          <button class="scroll-btn right">&#10095;</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="poppin-footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <img src="../Icons/popcorn.png" alt="Poppin Logo" class="footer-logo" />
+        <span class="footer-brand">Poppin'</span>
+      </div>
+      <div class="footer-right">
+        <div class="footer-columns">
+          <div class="footer-column overview">
+            <h3 class="footer-heading">Overview</h3>
+            <div class="overview-links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Digital Services Act</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column support">
+            <h3 class="footer-heading">Support</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Report a Bug</a></li>
+              <li><a href="#">Account Help</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <h3 class="follow-us-heading">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../Icons/facebook.png" alt="facebook" /></a>
+        <a href="#"><img src="../Icons/instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="../Icons/twitter.png" alt="x/twitter" /></a>
+      </div>
+      <p>&copy; 2025 Poppin'. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
