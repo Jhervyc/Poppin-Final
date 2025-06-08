@@ -86,8 +86,16 @@ li:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 20px;
   width: 100%;
+  height: auto;
+
+  position: sticky;
+  top: 0; /* distance from the top */
+  padding: 1rem;
+  padding-bottom: 50px;
+  z-index: 999;
+  background: linear-gradient(to bottom, #121212 80%, transparent 100%);
+
 }
 
 .topbar button{
